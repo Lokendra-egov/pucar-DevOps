@@ -1,7 +1,7 @@
 # credentials for creating resources
 resource_group = "loki-dev"
 environment    = "dev"
-location       = "South India"
+location       = "Central India"
 db_username = "pucar_dev"
 max_pod = 45
 # networking
