@@ -21,13 +21,6 @@ healthChecks:
   enabled: true
   livenessProbePath: "/digit-ui/"
   readinessProbePath: "/digit-ui/"
-
-env: |
-  - name: REACT_APP_ESIGN_FILESTORE_ID
-    valueFrom:
-      configMapKeyRef:
-        key: esign-filestore-id
-        name: egov-config
     
 extraVolumes: |
   - name: js-injection

@@ -56,13 +56,6 @@ env: |
       secretKeyRef:
         name: egov-notification-sms
         key: password
-  {{- if index .Values "secure-key" }}
-  - name: SMS_SENDER_SECURE_KEY
-    valueFrom:
-      secretKeyRef:
-        name: egov-notification-sms
-        key: securekey        
-  {{- end }}
   - name: SMS_ENABLED
     valueFrom:
       configMapKeyRef:

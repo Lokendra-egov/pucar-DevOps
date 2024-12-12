@@ -37,13 +37,7 @@ env: |
         key: mailsenderpassword
   {{- if index .Values "mail-port" }}
   - name: MAIL_PORT
-    value: {{ index .Values "mail-port" | quote }}
-  - name: MAIL_HOST
-    valueFrom:
-      secretKeyRef:
-        name: egov-notification-mail
-        key: mailhost
-  {{- end }}        
+    value: {{ index .Values "mail-port" | quote }}      
   - name: JAVA_OPTS
     value: {{ index .Values "heap" | quote }}
   - name: EGOV_LOCALIZATION_HOST
