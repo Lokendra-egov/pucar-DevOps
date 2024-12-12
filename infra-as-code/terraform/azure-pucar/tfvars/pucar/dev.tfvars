@@ -14,10 +14,10 @@ zone                      = null
 
 # kubernetes variables
 private_cluster_enabled  = false
-vm_size                  = "Standard_E2s_v4"
+vm_size                  = "Standard_E2as_v4"
 node_count               = "2"
 min_count                = "2"
-max_count                = "4"
+max_count                = "2"
 address_prefixes_aks     = ["10.8.1.0/24"]
 aks_dns_service_ip       = "10.8.4.10"
 aks_service_cidr         = "10.8.4.0/24"
