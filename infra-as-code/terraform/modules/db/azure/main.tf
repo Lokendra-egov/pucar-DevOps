@@ -16,7 +16,7 @@ resource "azurerm_private_dns_zone_virtual_network_link" "pucar_network_link" {
 }
 
 resource "azurerm_postgresql_flexible_server" "pucar_postgres" {
-  name                   = "${var.resource_group}-server"
+  name                   = "${var.resource_group}-test-server"
   resource_group_name    = "${var.resource_group}"
   location               = "${var.location}"
   version                = "${var.db_version}"
