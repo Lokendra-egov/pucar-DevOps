@@ -10,11 +10,11 @@ address_space = ["10.8.0.0/16"]
 # postgres
 db_version                = "11"
 address_prefixes_postgres = ["10.8.2.0/24"]
-zone                      = "2"
+zone                      = null
 
 # kubernetes variables
 private_cluster_enabled  = false
-vm_size                  = "Standard_D4_v4"
+vm_size                  = "Standard_E2s_v4"
 node_count               = "2"
 min_count                = "2"
 max_count                = "4"
