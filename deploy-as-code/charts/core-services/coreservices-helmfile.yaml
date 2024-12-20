@@ -129,11 +129,11 @@ releases:
 #         deployment: "workbench-ui"
 #      <<: *default
 #
-#    - name: mdms-v2
-#      installed: true
-#      labels:
-#       deployment: "mdms-v2"
-#      <<: *default
+    - name: mdms-v2
+      installed: true
+      labels:
+       deployment: "mdms-v2"
+      <<: *default
 #
 #    - name: individual  # Replace with your desired namespace
 #      installed: true
