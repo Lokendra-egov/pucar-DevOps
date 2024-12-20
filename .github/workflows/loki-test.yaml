@@ -224,7 +224,7 @@ jobs:
 
       - name: Postgres Data Migration
         run: |
-          POSTGRES_POD=$(kubectl get pods -n backbone -l app=postgres -o jsonpath='{.items[0].metadata.name}')
+          POSTGRES_POD=postgresql-0
           kubectl exec -n backbone $POSTGRES_POD -- bash -c 'if [ -f /tmp/init-scripts/dev.sql ]; then rm /tmp/dev.sql; echo "File deleted"; else echo "File does not exist"; fi'
           kubectl cp deploy-as-code/charts/backbone-services/init-scripts/dev.sql backbone/$POSTGRES_POD:/tmp/dev.sql
           kubectl exec -n default $POSTGRES_POD -- bash -c "PGPASSWORD=$PGPASSWORD psql -h loki-dev-test-server.postgres.database.azure.com -U pucar_dev -d loki-dev-db -f /tmp/dev.sql"
